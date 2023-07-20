@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Bootstrap 4 Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+        }
+
+        .banner-full-screen {
+            height: calc(100vh - 186px);
+            background-color: lightgray;
+            /* veya arka plan resmi ekleyebilirsiniz */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-full-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .banner-text-container {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            transform: translateY(-50%);
+            max-width: 35%;
+
+
+        }
+
+        .banner-text-container p {
+            font-size: 15px;
+        }
+
+        .banner-text-container .ust {
+            color: #32A7AB;
+        }
+
+        .banner-text-container .orta {
+            font-size: 55px;
+        }
+
+        @media (max-width: 768px) {
+
+            .banner-full-screen {
+                height:100vh;
+            }
+            .banner-full-screen img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: right;
+            }
+        
+            .banner-text-container {
+                top: initial;
+                left: 50%;
+                right: -175px;
+                bottom: 10px;
+                transform: translateX(-50%);
+                max-width: 100%;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+                background-color: #ffffffa1;
+                padding: 11px;
+                border-radius: 10px;
+            } 
+
+            
+            .banner-text-container .orta {
+                font-size: 35px;
+            }
+            .nvbr {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div style="height: 186px;" class="nvbr">
+            NAVBAR
+        </div>
+        <div class="banner-full-screen">
+            <img src="/arka.png" alt="Görsel">
+            <div class="banner-text-container">
+                <h6 class="ust">RENT NOW</h6>
+                <h1 class="orta">Your dream home is our top priority</h1>
+                <p class="alt">Welcome to X Property - Your Gateway to Dream Homes and Investment Opportunities.</p>
+                <button style="background-color: #32A7AB; padding:10px 20px;color:white;border-radius:10px; border:none">Discover
+                    More</button>
+            </div>
+      
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
